@@ -1,13 +1,25 @@
 ﻿@model List<Asignatura>
 @{
-    ViewData["Title"] = "Información de Asignatura";
+    ViewData["Title"] = "Información de Asignaturas";
     Layout = "_Layout";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-@foreach(var asig in @Model)
-{
-<h2>Id: @asig.UniqueId</h2>
-<h2>Nombre: @asig.Nombre</h2>
-}
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var asig in @Model)
+        {
+        <tr>
+            <td>@asig.Nombre</td>
+            <td>@asig.UniqueId</td>
+        </tr>
+        }
+    </tbody>
+</table>
