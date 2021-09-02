@@ -5,5 +5,12 @@
 }
 
 <h1>Escuela</h1>
+<h2>Id: @Model.UniqueId</h2>
 <h2>Nombre: @Model.Nombre</h2>
+<address>
+    <p>Dirección: @Model.Dirección</p>
+    <p>País: @Model.Pais</p>
+    <p>Ciudad: @Model.Ciudad</p>
+</address>
+<h3>Tipo de Escuela: @Model.TipoEscuela</h3>
 <h3>Año de fundación: @Model.Fundacion.ToString("yyyy")</h3>

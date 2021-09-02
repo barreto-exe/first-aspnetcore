@@ -1,0 +1,13 @@
+﻿@model List<Asignatura>
+@{
+    ViewData["Title"] = "Información de Asignatura";
+    Layout = "_Layout";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach(var asig in @Model)
+{
+<h2>Id: @asig.UniqueId</h2>
+<h2>Nombre: @asig.Nombre</h2>
+}

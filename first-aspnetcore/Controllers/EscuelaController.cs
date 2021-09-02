@@ -14,9 +14,12 @@ namespace first_aspnetcore.Controllers
         {
             var escuela = new Escuela()
             {
-                Id = Guid.NewGuid().ToString(),
                 Nombre = "UCAB Guayana",
                 Fundacion = DateTime.Now,
+                Dirección = "Av. Atlántico",
+                Ciudad = "Guayana",
+                Pais = "Venezuela",
+                TipoEscuela = TiposEscuela.Universidad,
             };
 
             return View(escuela);
